@@ -111,7 +111,7 @@ function filterCategory(category) {
     );
   });
 
-  toggleThumbnails(category !== 'all');
+  // toggleThumbnails(category !== 'all');
 
   let visible = 0;
 
@@ -199,69 +199,13 @@ function setupModalKeyboardNavigation() {
 
 async function orderOnInstagram(id) {
   const card = document.getElementById(id);
-  if (!card) return;
-
   const name = card.querySelector('.product-label').textContent;
   const link = `${location.origin}${location.pathname}#${id}`;
   const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
 
-  try {
-    await navigator.clipboard.writeText(text);
-
-    const toast = document.getElementById('copyToast');
-    toast.classList.add('show');
-
-    setTimeout(() => {
-      toast.classList.remove('show');
-    }, 1000);
-
-    setTimeout(() => {
-      window.open('https://ig.me/m/mrida.kriti', '_blank');
-    }, 1100);
-  } catch (err) {
-    window.open('https://ig.me/m/mrida.kriti', '_blank');
-  }
-}
-
-async function orderOnInstagramOld(id) {
-  const card = document.getElementById(id);
-  if (!card) return;
-
-  const button = card.querySelector('.order-btn');
-  const name = card.querySelector('.product-label').textContent;
-  const link = `${location.origin}${location.pathname}#${id}`;
-  const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
-
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const instagramWeb = 'https://ig.me/m/mrida.kriti';
-  const instagramApp = 'instagram://direct/new?username=mrida.kriti';
-
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch (e) {}
-
-  // Show toast immediately
-  const toast = document.getElementById('copyToast');
-  const rect = button.getBoundingClientRect();
-
-  toast.style.left = `${rect.left + rect.width / 2}px`;
-  toast.style.top = `${rect.top + window.scrollY - 12}px`;
-  toast.style.transform = 'translate(-50%, -100%)';
-  toast.classList.add('show');
+  await navigator.clipboard.writeText(text);
 
   setTimeout(() => {
-    toast.classList.remove('show');
-  }, 2000);
-
-  // IMPORTANT: open Instagram immediately (no delay)
-  if (isMobile) {
-    window.location.href = instagramApp;
-
-    // fallback only if app is not installed
-    setTimeout(() => {
-      window.location.href = instagramWeb;
-    }, 600);
-  } else {
-    window.open(instagramWeb, '_blank');
-  }
+    window.open('https://ig.me/m/mrida.kriti', '_blank');
+  }, 800);
 }

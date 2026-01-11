@@ -5,9 +5,9 @@
       "sizeCategory": "S",
       "designType": "Circle",
       "dimensions": "4 inch × 4 inch",
-      "image": "images/small/small_1.png",
+      "image": "images/small/small_1.jpeg",
       "images": [
-        "images/small/small_1.png",
+        "images/small/small_1.jpeg",
         "images/small/small_1_1.jpeg"
       ],
       "label": "Set of 4 (4 inch Circle)"
@@ -65,9 +65,9 @@
       "sizeCategory": "M",
       "designType": "Circle",
       "dimensions": "12 inch × 12 inch",
-      "image": "images/medium/medium_1.png",
+      "image": "images/medium/medium_1.jpeg",
       "images": [
-        "images/medium/medium_1.png",
+        "images/medium/medium_1.jpeg",
         "images/medium/medium_1_1.jpeg"
       ],
       "label": "12 inch Circle"
@@ -77,9 +77,9 @@
       "sizeCategory": "M",
       "designType": "Circle",
       "dimensions": "12 inch × 12 inch",
-      "image": "images/medium/medium_2.png",
+      "image": "images/medium/medium_2.jpeg",
       "images": [
-        "images/medium/medium_2.png",
+        "images/medium/medium_2.jpeg",
         "images/medium/medium_2_1.jpeg"
       ],
       "label": "12 inch Circle"  
@@ -89,9 +89,9 @@
       "sizeCategory": "M",
       "designType": "Circle",
       "dimensions": "12 inch × 12 inch",
-      "image": "images/medium/medium_3.png",
+      "image": "images/medium/medium_3.jpeg",
       "images": [
-        "images/medium/medium_3.png",
+        "images/medium/medium_3.jpeg",
         "images/medium/medium_3_1.jpeg"
       ],
       "label": "12 inch Circle"  
@@ -101,9 +101,9 @@
       "sizeCategory": "M",
       "designType": "Circle",
       "dimensions": "12 inch × 12 inch",
-      "image": "images/medium/medium_4.png",
+      "image": "images/medium/medium_4.jpeg",
       "images": [
-        "images/medium/medium_4.png",
+        "images/medium/medium_4.jpeg",
         "images/medium/medium_4_1.jpeg"
       ],
       "label": "12 inch Circle"  
@@ -125,10 +125,10 @@
       "sizeCategory": "L",
       "designType": "Rectangle",
       "dimensions": "28 inch × 46 inch",
-      "image": "images/large/large_1.png",
+      "image": "images/large/large_1.jpeg",
       "images": [
-        "images/large/large_1.png",
-        "images/large/large_1_1.png"
+        "images/large/large_1.jpeg",
+        "images/large/large_1_1.jpeg"
       ],
       "label": "28 x 46 inch Rectangle"
     }
