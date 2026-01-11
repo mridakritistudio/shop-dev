@@ -197,7 +197,43 @@ function setupModalKeyboardNavigation() {
    INSTAGRAM ORDER
 ===================================================== */
 
-async function orderOnInstagram(id) {
+function orderOnInstagram(id) {
+  const card = document.getElementById(id);
+  if (!card) return;
+
+  const name = card.querySelector('.product-label').textContent;
+  const link = `${location.origin}${location.pathname}#${id}`;
+  const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  const instagramAppDM = 'instagram://direct/new?username=mrida.kriti';
+  const instagramWebDM = 'https://ig.me/m/mrida.kriti';
+  const instagramHome = 'https://www.instagram.com/mrida.kriti/';
+
+  // Copy text (best effort, non-blocking)
+  navigator.clipboard?.writeText(text).catch(() => {});
+
+  if (isMobile) {
+    // Try opening Instagram app DM
+    window.location.href = instagramAppDM;
+
+    // Fallback if app is not installed or deep link fails
+    setTimeout(() => {
+      window.location.href = instagramWebDM;
+    }, 600);
+
+    // Final fallback to profile page
+    setTimeout(() => {
+      window.location.href = instagramHome;
+    }, 1400);
+  } else {
+    // Desktop
+    window.open(instagramWebDM, '_blank');
+  }
+}
+
+async function orderOnInstagramOld(id) {
   const card = document.getElementById(id);
   if (!card) return;
 
