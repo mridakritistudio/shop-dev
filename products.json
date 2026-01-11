@@ -1,0 +1,137 @@
+{
+  "products": [
+    {
+      "id": "product-4inch-circle-1",
+      "sizeCategory": "S",
+      "designType": "Circle",
+      "dimensions": "4 inch × 4 inch",
+      "image": "images/small/small_1.png",
+      "images": [
+        "images/small/small_1.png",
+        "images/small/small_1_1.jpeg"
+      ],
+      "label": "Set of 4 (4 inch Circle)"
+    },
+    {
+      "id": "product-8inch-square-2",
+      "sizeCategory": "S",
+      "designType": "Square",
+      "dimensions": "8 inch × 8 inch",
+      "image": "images/small/small_2.jpeg",
+      "images": [
+        "images/small/small_2.jpeg",
+        "images/small/small_2_1.jpeg"
+      ],
+      "label": "8 inch Square"
+    },
+    {
+      "id": "product-8inch-square-3",
+      "sizeCategory": "S",
+      "designType": "Square",
+      "dimensions": "8 inch × 8 inch",
+      "image": "images/small/small_3.jpeg",
+      "images": [
+        "images/small/small_3.jpeg",
+        "images/small/small_3_1.jpeg"
+      ],
+      "label": "8 inch Square"
+    },
+    {
+      "id": "product-8inch-square-4",
+      "sizeCategory": "S",
+      "designType": "Square",
+      "dimensions": "8 inch × 8 inch",
+      "image": "images/small/small_4.jpeg",
+      "images": [
+        "images/small/small_4.jpeg",
+        "images/small/small_4_1.jpeg"
+      ],
+      "label": "8 inch Square"
+    },
+    {
+      "id": "product-8inch-square-5",
+      "sizeCategory": "S",
+      "designType": "Square",
+      "dimensions": "8 inch × 8 inch",
+      "image": "images/small/small_5.jpeg",
+      "images": [
+        "images/small/small_5.jpeg",
+        "images/small/small_5_1.jpeg"
+      ],
+      "label": "8 inch Square"
+    },
+    {
+      "id": "product-12inch-circle-1",
+      "sizeCategory": "M",
+      "designType": "Circle",
+      "dimensions": "12 inch × 12 inch",
+      "image": "images/medium/medium_1.png",
+      "images": [
+        "images/medium/medium_1.png",
+        "images/medium/medium_1_1.jpeg"
+      ],
+      "label": "12 inch Circle"
+    },
+    {
+      "id": "product-12inch-circle-2",
+      "sizeCategory": "M",
+      "designType": "Circle",
+      "dimensions": "12 inch × 12 inch",
+      "image": "images/medium/medium_2.png",
+      "images": [
+        "images/medium/medium_2.png",
+        "images/medium/medium_2_1.jpeg"
+      ],
+      "label": "12 inch Circle"  
+    },
+    {
+      "id": "product-12inch-circle-3",
+      "sizeCategory": "M",
+      "designType": "Circle",
+      "dimensions": "12 inch × 12 inch",
+      "image": "images/medium/medium_3.png",
+      "images": [
+        "images/medium/medium_3.png",
+        "images/medium/medium_3_1.jpeg"
+      ],
+      "label": "12 inch Circle"  
+    },
+    {
+      "id": "product-12inch-circle-4",
+      "sizeCategory": "M",
+      "designType": "Circle",
+      "dimensions": "12 inch × 12 inch",
+      "image": "images/medium/medium_4.png",
+      "images": [
+        "images/medium/medium_4.png",
+        "images/medium/medium_4_1.jpeg"
+      ],
+      "label": "12 inch Circle"  
+    },
+    {
+      "id": "product-16inch-square-5",
+      "sizeCategory": "M",
+      "designType": "Square",
+      "dimensions": "8 inch × 8 inch",
+      "image": "images/medium/medium_5.jpeg",
+      "images": [
+        "images/medium/medium_5.jpeg",
+        "images/medium/medium_5_1.jpeg"
+      ],
+      "label": "Set of 4 (8 inch Square)"  
+    },
+    {
+      "id": "product-28x46-rectangle",
+      "sizeCategory": "L",
+      "designType": "Rectangle",
+      "dimensions": "28 inch × 46 inch",
+      "image": "images/large/large_1.png",
+      "images": [
+        "images/large/large_1.png",
+        "images/large/large_1_1.png"
+      ],
+      "label": "28 x 46 inch Rectangle"
+    }
+  ]
+}
+

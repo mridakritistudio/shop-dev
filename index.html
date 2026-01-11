@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/jpeg" href="images/logo/icon.JPG">
+  <title>mridakritistudio | Handcrafted Lippan Art</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <div class="brand-container">
+    <img src="images/logo/icon.JPG" alt="mridakritistudio logo" class="logo">
+    <div class="brand-text">
+      <h1>mridakritistudio</h1>
+      <p>Handcrafted Lippan Art | Mud and Mirror Creations</p>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">About Lippan Art</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <img src="images/lippan-placeholder.png" alt="Lippan Art">
+  <div class="hero-text">
+    <p>
+      Lippan art is a traditional mud and mirror craft that brings warmth,
+      texture, and heritage into modern spaces.
+    </p>
+    <a href="#shop" class="cta-button">Explore Artworks</a>
+  </div>
+</section>
+
+<section id="shop">
+  <h2>Available Artworks</h2>
+
+  <div class="category-filter">
+    <button class="active" onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('small')">Small</button>
+    <button onclick="filterCategory('medium')">Medium</button>
+    <button onclick="filterCategory('large')">Large</button>
+  </div>
+
+  <div class="products" id="products-container">
+    <!-- Products will be loaded dynamically from products.json -->
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <h2>About Lippan Art</h2>
+    <p>
+      Lippan art originates from the Kutch region of Gujarat and is crafted
+      using natural mud and hand-placed mirrors.
+    </p>
+    <p>
+      Each piece is shaped slowly by hand, making every artwork unique,
+      textured, and deeply rooted in tradition.
+    </p>
+    <p>
+      These creations bring warmth, calm, and an earthy elegance into
+      contemporary living spaces.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>For orders and custom requests, connect with us on Instagram.</p>
+  <p>
+    <strong>Instagram:</strong>
+    <a href="https://www.instagram.com/mrida.kriti/" target="_blank">
+      @mrida.kriti
+    </a>
+  </p>
+</section>
+
+<footer>
+  <div>mridakritistudio | Handcrafted Lippan Art</div>
+  <div>
+    <a href="https://www.instagram.com/mrida.kriti/" target="_blank">
+      Instagram
+    </a>
+  </div>
+</footer>
+
+<div class="modal" id="imageModal" onclick="closeModal()">
+  <span class="modal-close" onclick="event.stopPropagation(); closeModal()">&times;</span>
+  <button class="modal-nav modal-prev" id="modalPrev" onclick="event.stopPropagation(); previousImage()">‹</button>
+  <button class="modal-nav modal-next" id="modalNext" onclick="event.stopPropagation(); nextImage()">›</button>
+  <div class="modal-image-counter" id="modalImageCounter"></div>
+  <img id="modalImage" onclick="event.stopPropagation()">
+</div>
+
+<script src="script.js"></script>
+<div id="copyToast" class="copy-toast">
+  ✔ Link copied. Paste it in DM.
+</div>
+
+</body>
+</html>
