@@ -206,41 +206,36 @@ async function orderOnInstagram(id) {
   const link = `${location.origin}${location.pathname}#${id}`;
   const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
 
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const instagramWeb = 'https://ig.me/m/mrida.kriti';
+  const instagramApp = 'instagram://direct/new?username=mrida.kriti';
+
   try {
     await navigator.clipboard.writeText(text);
+  } catch (e) {}
 
-    const toast = document.getElementById('copyToast');
-    const rect = button.getBoundingClientRect();
+  // Show toast immediately
+  const toast = document.getElementById('copyToast');
+  const rect = button.getBoundingClientRect();
 
-    toast.style.left = `${rect.left + rect.width / 2}px`;
-    toast.style.top = `${rect.top + window.scrollY - 12}px`;
-    toast.style.transform = 'translate(-50%, -100%)';
-    toast.classList.add('show');
+  toast.style.left = `${rect.left + rect.width / 2}px`;
+  toast.style.top = `${rect.top + window.scrollY - 12}px`;
+  toast.style.transform = 'translate(-50%, -100%)';
+  toast.classList.add('show');
 
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2000);
+
+  // IMPORTANT: open Instagram immediately (no delay)
+  if (isMobile) {
+    window.location.href = instagramApp;
+
+    // fallback only if app is not installed
     setTimeout(() => {
-      toast.classList.remove('show');
-    }, 2000);
-
-    setTimeout(() => {
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-      const instagramDM = 'instagram://direct/new?username=mrida.kriti';
-      const instagramWeb = 'https://ig.me/m/mrida.kriti';
-
-      if (isMobile) {
-        // This opens the Instagram app directly
-        window.location.href = instagramDM;
-
-        // Fallback if app is not installed
-        setTimeout(() => {
-          window.location.href = instagramWeb;
-        }, 800);
-      } else {
-        window.open(instagramWeb, '_blank');
-      }
-    }, 2000);
-
-  } catch (err) {
-    window.location.href = 'https://ig.me/m/mrida.kriti';
+      window.location.href = instagramWeb;
+    }, 600);
+  } else {
+    window.open(instagramWeb, '_blank');
   }
 }
