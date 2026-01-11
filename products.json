@@ -133,6 +133,42 @@
       "label": "Set of 5 (10 inch Circle)"  
     },
     {
+      "id": "product-15inch-rectangle-7",
+      "sizeCategory": "M",
+      "designType": "Rectangle",
+      "dimensions": "15 inch × 10 inch",
+      "image": "images/medium/medium_7.jpeg",
+      "images": [
+        "images/medium/medium_7.jpeg",
+        "images/medium/medium_7_1.jpeg"
+      ],
+      "label": "15 x 10 inch Rectangle"  
+    },
+    {
+      "id": "product-15inch-rectangle-8",
+      "sizeCategory": "M",
+      "designType": "Rectangle",
+      "dimensions": "15 inch × 10 inch",
+      "image": "images/medium/medium_8.jpeg",
+      "images": [
+        "images/medium/medium_8.jpeg",
+        "images/medium/medium_8_1.jpeg"
+      ],
+      "label": "15 x 10 inch Rectangle"  
+    },
+    {
+      "id": "product-15inch-rectangle-9",
+      "sizeCategory": "M",
+      "designType": "Rectangle",
+      "dimensions": "15 inch × 10 inch",
+      "image": "images/medium/medium_9.jpeg",
+      "images": [
+        "images/medium/medium_9.jpeg",
+        "images/medium/medium_9_1.jpeg"
+      ],
+      "label": "15 x 10 inch Rectangle"  
+    },
+    {
       "id": "product-28x46-rectangle",
       "sizeCategory": "L",
       "designType": "Rectangle",
