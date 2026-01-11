@@ -121,6 +121,18 @@
       "label": "Set of 4 (8 inch Square)"  
     },
     {
+      "id": "product-10inch-circle-6",
+      "sizeCategory": "M",
+      "designType": "Circle",
+      "dimensions": "10 inch × 10 inch",
+      "image": "images/medium/medium_6.jpeg",
+      "images": [
+        "images/medium/medium_6.jpeg",
+        "images/medium/medium_6_1.jpeg"
+      ],
+      "label": "Set of 5 (10 inch Circle)"  
+    },
+    {
       "id": "product-28x46-rectangle",
       "sizeCategory": "L",
       "designType": "Rectangle",
