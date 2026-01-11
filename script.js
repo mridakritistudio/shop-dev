@@ -210,13 +210,11 @@ async function orderOnInstagram(id) {
     await navigator.clipboard.writeText(text);
 
     const toast = document.getElementById('copyToast');
-
-    // Position toast above the clicked button
     const rect = button.getBoundingClientRect();
+
     toast.style.left = `${rect.left + rect.width / 2}px`;
     toast.style.top = `${rect.top + window.scrollY - 12}px`;
     toast.style.transform = 'translate(-50%, -100%)';
-
     toast.classList.add('show');
 
     setTimeout(() => {
@@ -224,9 +222,25 @@ async function orderOnInstagram(id) {
     }, 2000);
 
     setTimeout(() => {
-      window.open('https://ig.me/m/mrida.kriti', '_blank');
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      const instagramDM = 'instagram://direct/new?username=mrida.kriti';
+      const instagramWeb = 'https://ig.me/m/mrida.kriti';
+
+      if (isMobile) {
+        // This opens the Instagram app directly
+        window.location.href = instagramDM;
+
+        // Fallback if app is not installed
+        setTimeout(() => {
+          window.location.href = instagramWeb;
+        }, 800);
+      } else {
+        window.open(instagramWeb, '_blank');
+      }
     }, 2000);
+
   } catch (err) {
-    window.open('https://ig.me/m/mrida.kriti', '_blank');
+    window.location.href = 'https://ig.me/m/mrida.kriti';
   }
 }
