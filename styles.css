@@ -43,7 +43,7 @@ a {
   color: inherit;
 }
 
-header {
+/* header {
   text-align: center;
   padding: 40px 16px 20px;
   background: linear-gradient(180deg, var(--beige), var(--off-white));
@@ -57,7 +57,26 @@ header {
             box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: padding;
 
+} */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 239, 233, 0.95),
+    rgba(250, 248, 245, 0.95)
+  );
+  box-shadow: 0 2px 20px var(--shadow-light);
+  transition: padding 0.5s ease;
 }
+
 
 .brand-container {
   display: flex;
@@ -111,6 +130,7 @@ header p {
 
 nav {
   margin-top: 24px;
+  flex-shrink: 0;
 }
 
 nav ul {
@@ -727,9 +747,16 @@ footer a:hover {
 ========================================================= */
 
 /* Shrink state */
+/* header.scrolled {
+  padding: 10px 20px;
+} */
+
 header.scrolled {
+  flex-direction: row;
+  justify-content: space-between;
   padding: 10px 20px;
 }
+
 
 /* Rearrange header content into one row */
 header.scrolled .brand-container {
@@ -761,10 +788,15 @@ header.scrolled .brand-text p {
   overflow: hidden;
 }
 
-/* Navigation moves to the right */
 header.scrolled nav {
-  margin-top: 0;
+  max-width: none;
 }
+
+
+/* Navigation moves to the right */
+/* header.scrolled nav {
+  margin-top: 0;
+} */
 
 header.scrolled nav ul {
   justify-content: flex-end;
@@ -812,9 +844,7 @@ header.scrolled nav {
 }
 
 .brand-text p {
-  transition: opacity 0.4s ease,
-              max-height 0.6s ease,
-              margin 0.6s ease;
+  transition: opacity 0.3s ease;
 }
 
 nav {
