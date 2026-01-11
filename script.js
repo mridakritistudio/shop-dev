@@ -2,14 +2,21 @@
    HEADER SHRINK ON SCROLL
 ===================================================== */
 
+let isScrolled = false;
+
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   if (!header) return;
 
-  if (window.scrollY > 80) {
+  const y = window.scrollY;
+
+  if (!isScrolled && y > 100) {
     header.classList.add('scrolled');
-  } else {
+    isScrolled = true;
+  } 
+  else if (isScrolled && y < 40) {
     header.classList.remove('scrolled');
+    isScrolled = false;
   }
 });
 
