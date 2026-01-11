@@ -201,6 +201,7 @@ async function orderOnInstagram(id) {
   const card = document.getElementById(id);
   if (!card) return;
 
+  const button = card.querySelector('.order-btn');
   const name = card.querySelector('.product-label').textContent;
   const link = `${location.origin}${location.pathname}#${id}`;
   const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
@@ -209,15 +210,22 @@ async function orderOnInstagram(id) {
     await navigator.clipboard.writeText(text);
 
     const toast = document.getElementById('copyToast');
+
+    // Position toast above the clicked button
+    const rect = button.getBoundingClientRect();
+    toast.style.left = `${rect.left + rect.width / 2}px`;
+    toast.style.top = `${rect.top + window.scrollY - 12}px`;
+    toast.style.transform = 'translate(-50%, -100%)';
+
     toast.classList.add('show');
 
     setTimeout(() => {
       toast.classList.remove('show');
-    }, 1000);
+    }, 2000);
 
     setTimeout(() => {
       window.open('https://ig.me/m/mrida.kriti', '_blank');
-    }, 1100);
+    }, 2000);
   } catch (err) {
     window.open('https://ig.me/m/mrida.kriti', '_blank');
   }
