@@ -197,7 +197,7 @@ function setupModalKeyboardNavigation() {
    INSTAGRAM ORDER
 ===================================================== */
 
-function orderOnInstagram(id) {
+async function orderOnInstagram(id) {
   const card = document.getElementById(id);
   if (!card) return;
 
@@ -205,31 +205,21 @@ function orderOnInstagram(id) {
   const link = `${location.origin}${location.pathname}#${id}`;
   const text = `Hi! I'm interested in ordering: ${name}\n\n${link}`;
 
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  try {
+    await navigator.clipboard.writeText(text);
 
-  const instagramAppDM = 'instagram://direct/new?username=mrida.kriti';
-  const instagramWebDM = 'https://ig.me/m/mrida.kriti';
-  const instagramHome = 'https://www.instagram.com/mrida.kriti/';
+    const toast = document.getElementById('copyToast');
+    toast.classList.add('show');
 
-  // Copy text (best effort, non-blocking)
-  navigator.clipboard?.writeText(text).catch(() => {});
-
-  if (isMobile) {
-    // Try opening Instagram app DM
-    window.location.href = instagramAppDM;
-
-    // Fallback if app is not installed or deep link fails
     setTimeout(() => {
-      window.location.href = instagramWebDM;
-    }, 600);
+      toast.classList.remove('show');
+    }, 1000);
 
-    // Final fallback to profile page
     setTimeout(() => {
-      window.location.href = instagramHome;
-    }, 1400);
-  } else {
-    // Desktop
-    window.open(instagramWebDM, '_blank');
+      window.open('https://ig.me/m/mrida.kriti', '_blank');
+    }, 1100);
+  } catch (err) {
+    window.open('https://ig.me/m/mrida.kriti', '_blank');
   }
 }
 
